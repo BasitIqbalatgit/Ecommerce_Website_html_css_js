@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">MyShop</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="cart">
+            <a href="cart.html"><i class="fas fa-shopping-cart cart-icon"></i></a>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <!-- Checkout Section -->
+    <section class="checkout-container">
+        <h1>Checkout</h1>
+        
+        <!-- Shipping Information Form -->
+        <form class="shipping-form" id="shipping-form">
+            <h2>Shipping Details</h2>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+            <label for="address">Address</label>
+            <input type="text" id="address" required>
+            <label for="city">City</label>
+            <input type="text" id="city" required>
+            <label for="zip">ZIP Code</label>
+            <input type="text" id="zip" required>
+            <label for="country">Country</label>
+            <input type="text" id="country" required>
+        </form>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="order-items" id="order-items">
+                <!-- Order items will be injected here -->
+            </div>
+            <div class="total-price">
+                <h3>Total: <span id="total-price">$0.00</span></h3>
+                <button id="place-order-btn"type="button" >Place Order</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

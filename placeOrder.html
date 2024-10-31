@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="place_order.css">
+</head>
+<body>
+    <section class="order-container">
+        <h1>Place Your Order</h1>
+        
+        <!-- Payment Selection -->
+        <div class="payment-method">
+            <h2>Select Payment Method</h2>
+            <label>
+                <input type="radio" name="payment" value="cash" checked>
+                Cash on Delivery
+            </label>
+            <label>
+                <input type="radio" name="payment" value="online">
+                Online Payment
+            </label>
+        </div>
+
+        <!-- Online Payment Form (Initially Hidden) -->
+        <div class="online-payment-form" id="online-payment-form" style="display: none;">
+            <h3>Enter Payment Details</h3>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+            
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY">
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" placeholder="123">
+            
+            <label for="cardholder-name">Cardholder Name:</label>
+            <input type="text" id="cardholder-name" placeholder="John Doe">
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <p>Total Price: <span id="order-total-price">$0.00</span></p>
+            <button id="place-order-btn">Place Order</button>
+            <button id="cancel-order-btn">Cancel Order</button>
+        </div>
+    </section>
+
+    <script src="place_order.js"></script>
+</body>
+</html>

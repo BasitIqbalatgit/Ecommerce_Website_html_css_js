@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.gif-wrapper {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    animation: wrapEffect 3s infinite;
+}
+
+.gif-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    border: 5px solid #3498db;
+    box-sizing: border-box;
+    border-radius: 15px;
+    animation: borderEffect 3s infinite;
+}
+
+@keyframes wrapEffect {
+    0% { transform: scale(0.5); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes borderEffect {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
